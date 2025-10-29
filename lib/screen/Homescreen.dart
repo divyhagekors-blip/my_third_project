@@ -18,10 +18,12 @@ class _HomescreenState extends ConsumerState<Homescreen> {
       ),
       body: Column(mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          TextField(
-            onChanged: (value){
-              ref.read(dataprovider.notifier).textfield(value);
-            },
+          Center(
+            child: TextField(
+              onChanged: (value){
+                ref.read(dataprovider.notifier).textfield(value);
+              },
+            ),
           ),
           Consumer(builder: (context, ref, child){
             final textfielddata = ref.watch(dataprovider.select((state)=> state.search));
