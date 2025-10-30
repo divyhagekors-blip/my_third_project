@@ -12,6 +12,9 @@ class _SetdataState extends State<Setdata> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("divy"),),
+      body: Column(
+        children: [],
+      ),
     );
   }
 }
