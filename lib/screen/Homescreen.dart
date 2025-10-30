@@ -69,11 +69,13 @@ class _HomescreenState extends ConsumerState<Homescreen> {
             return Text(counterdata.toString());
           }),
 
-          ElevatedButton(
-              onPressed: (){
-                ref.read(dataprovider.notifier).counterdata(0);
-              },
-              child: Icon(Icons.add))
+          Container(
+            child: ElevatedButton(
+                onPressed: (){
+                  ref.read(dataprovider.notifier).counterdata(0);
+                },
+                child: Icon(Icons.add)),
+          )
         ],
       ),
     );
